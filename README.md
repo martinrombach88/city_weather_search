@@ -22,4 +22,4 @@ Other days include:
 - An icon for the weather
 - A description of the weather
 
-The app is built using Javascript.
+The app is built using Javascript. A goal is to aim for a modular build, with functions that reasonably independent.
