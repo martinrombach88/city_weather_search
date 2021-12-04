@@ -22,4 +22,13 @@ Other days include:
 - An icon for the weather
 - A description of the weather
 
-The app was built using Javascript. A goal is to aim for generic, independent functions in the build and to use a modular structure where possible.
+The app was built using Javascript. I built the code originally for my bootcamp, twice, the second attempt using an objects based design.
+For GitHub, I plan to add two new features. The first is a background changer, where I will use DOM manipulation to add unique backgrounds
+depending on the weather shown in the 'Today' container. I will also add an autocomplete, which triggers when the user writes, before they commit
+to a choice with Enter.
+
+Work Order:
+1. Build HTML structure (complete)
+2. Integrate base weather app code and stylise (complete)
+3. Implement the background changer
+4. Implement the auto complete feature
