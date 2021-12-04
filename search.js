@@ -23,6 +23,7 @@ function getWeather(city)  {
             results.innerHTML = "";
             let weatherResponse = JSON.parse(xhr.response);
             let filteredWData = filterWeatherData(weatherResponse.city.name, weatherResponse.list);
+            console.log(filteredWData);
             setToday(results, filteredWData);
             setOtherContainer(results, filteredWData);
         }
@@ -136,3 +137,19 @@ function createIcon(data) {
     icon.setAttribute("src", "http://openweathermap.org/img/w/" + data + ".png"); //Should be Populate phase
     return icon; 
 }
+
+//Set Background 
+function setBackground(data, array) {
+    
+    const backgroundArray = ['few clouds', 'scattered clouds', 'broken clouds', 'shower rain', 'rain', 'thunderstorm', 'snow', 'mist', 'clear sky'];
+
+}
+
+//LOGIC - 
+//if data includes description X, change to background X.
+//Background changes set on body.
+
+//Use data[index].description to reference the description.
+
+//Get backgrounds first
+

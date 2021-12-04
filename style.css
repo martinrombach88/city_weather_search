@@ -4,12 +4,61 @@ body {
     flex-direction:column;
     justify-content: center;
     align-items:center;
-    background-image:url(../city_weather_search/assets/images/gradientBlue.jpg);
     background-size:cover;
+    background-image:url(../city_weather_search/assets/images/gradientBlue.jpg);
+    color:rgb(233, 235, 252);
+    
+    
+}
+/* Body default - background-image:url(../city_weather_search/assets/images/gradientBlue.jpg); */
+/* color:rgb(233, 235, 252); */
+
+#rainyBody {
+    background-image:url(../city_weather_search/assets/images/rain.jpg);
+    color:rgb(0, 0, 0); 
+}
+
+#clearBody {
+    background-image:url(../city_weather_search/assets/images/few_clouds.jpg);
     color:rgb(233, 235, 252);
 }
 
-h1, h2 {
+#cloudyBody {
+    background-image:url(../city_weather_search/assets/images/overcast.jpg);
+    color:rgb(0, 0, 0);
+}
+
+#stormyBody {
+    background-image:url(../city_weather_search/assets/images/storm.jpg);
+    /*Note -  .containerStorm - add class to container */
+}
+
+#snowyBody {
+    background-image:url(../city_weather_search/assets/images/snowy.jpg);
+    color:rgb(0, 0, 0);
+}
+
+
+/* List: ['few clouds', 'scattered clouds', 'broken clouds', 'shower rain', 'rain', 'thunderstorm', 'snow', 'mist', 'clear sky']; */
+
+#artistLink {
+    position:absolute;
+    top:555px;
+    right:10px;
+    font-size:0.7em;
+    
+}
+
+#artistLink a{
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+}
+
+#artistLinkHide {
+    display:none;
+}
+
+h1, h3 {
     margin:10px;
 }
 
@@ -47,12 +96,17 @@ h1, h2 {
 }
 
 .container {
-    margin:10px;
-    
     display:flex;
     flex-direction:column;
     align-items:center;
     width:250px;
+}
+
+.containerStorm {
+    background-color: rgb(16, 41, 58);
+    opacity:0.85;
+    margin:2px;
+    color:white;
 }
 
 .container p {
@@ -64,12 +118,13 @@ h1, h2 {
 }
 
 .allOther {
-    border-top:rgb(233, 235, 252) 1px solid;
+    border-top: 1px solid;
     width:60%;
     display:flex;
     flex-direction: row;
     justify-content: space-between;
 }
+
 
 .allOther div{
     padding:10px;
@@ -87,4 +142,8 @@ h1, h2 {
 
 .innerDiv div{
     margin:10px;
+}
+
+.innerDiv p{
+    font-size:0.8em;
 }
