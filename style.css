@@ -9,6 +9,10 @@ body {
     color:rgb(233, 235, 252);
 }
 
+h1, h2 {
+    margin:10px;
+}
+
 /* ~~~~~~~~~~~~~~~~~~ SEARCH ~~~~~~~~~~~~~~~~~~ */
 
 #searchContainer {
@@ -32,3 +36,55 @@ body {
     outline:none;
 }
 
+/* ~~~~~~~~~~~~~~~~~~ RESULTS ~~~~~~~~~~~~~~~~~~ */
+
+
+#results {
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+.container {
+    margin:10px;
+    
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:250px;
+}
+
+.container p {
+    margin:0;
+}
+
+.today {
+    font-size:1.1em;
+}
+
+.allOther {
+    border-top:rgb(233, 235, 252) 1px solid;
+    width:60%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.allOther div{
+    padding:10px;
+    
+}
+
+.otherDay {
+    font-size:0.9em;
+    justify-content: center;
+}
+
+.innerDiv {
+    display:flex;
+}
+
+.innerDiv div{
+    margin:10px;
+}
