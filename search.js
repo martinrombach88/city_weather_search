@@ -16,7 +16,7 @@ function getWeather(city)  {
     const results = document.querySelector("#results");
     const APP_ID = "1cbfb739f9b6cfae7ea0cc16fe258306";
     let xhr = new XMLHttpRequest();
-    let citySelect = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid="+ APP_ID;
+    let citySelect = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid="+ APP_ID;
     xhr.open('GET', citySelect);
     xhr.addEventListener('load', function() {
         if (xhr.status == 200) {
