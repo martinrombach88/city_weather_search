@@ -34,5 +34,5 @@ Work Order:
 
 Future Updates:
 1. Implement the background changer
-2. Implement the auto complete feature - Note: this feature will be added once a PHP/mySQL service has been secured.
+2. Implement the auto complete feature 
 3. Attempt to reorganise in a modular way.
