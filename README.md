@@ -32,5 +32,5 @@ Work Order:
 1. Build HTML structure (complete)
 2. Integrate base weather app code and stylise (complete)
 3. Implement the background changer
-4. Implement the auto complete feature
+4. Implement the auto complete feature - Note: this feature will be added once a PHP/mySQL service has been secured.
 5. Attempt to reorganise in a modular way.
