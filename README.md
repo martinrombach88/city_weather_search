@@ -33,6 +33,6 @@ Work Order:
 2. Integrate base weather app code and stylise (complete)
 
 Future Updates:
-3. Implement the background changer
-4. Implement the auto complete feature - Note: this feature will be added once a PHP/mySQL service has been secured.
-5. Attempt to reorganise in a modular way.
+1. Implement the background changer
+2. Implement the auto complete feature - Note: this feature will be added once a PHP/mySQL service has been secured.
+3. Attempt to reorganise in a modular way.
