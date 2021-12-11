@@ -5,41 +5,42 @@ body {
     justify-content: center;
     align-items:center;
     background-size:cover;
-    background-image:url(../city_weather_search/assets/images/gradientBlue.jpg);
+    background-image:url(assets/images/gradientBlue.jpg);
     color:rgb(233, 235, 252);
     
     
 }
-/* Body default - background-image:url(../city_weather_search/assets/images/gradientBlue.jpg); */
-/* color:rgb(233, 235, 252); */
 
 #rainyBody {
-    background-image:url(../city_weather_search/assets/images/rain.jpg);
+    background-image:url(assets/images/rain.jpg);
     color:rgb(0, 0, 0); 
 }
 
 #clearBody {
-    background-image:url(../city_weather_search/assets/images/few_clouds.jpg);
+    background-image:url(assets/images/few_clouds.jpg);
     color:rgb(233, 235, 252);
 }
 
 #cloudyBody {
-    background-image:url(../city_weather_search/assets/images/overcast.jpg);
+    background-image:url(assets/images/overcast.jpg);
     color:rgb(0, 0, 0);
 }
 
 #stormyBody {
-    background-image:url(../city_weather_search/assets/images/storm.jpg);
+    background-image:url(assets/images/storm.jpg);
     /*Note -  .containerStorm - add class to container */
 }
 
 #snowyBody {
-    background-image:url(../city_weather_search/assets/images/snowy.jpg);
+    background-image:url(assets/images/snowy.jpg);
     color:rgb(0, 0, 0);
 }
 
+#mistyBody {
+    background-image:url(assets/images/mist.jpg);
+    color:rgb(0, 0, 0);
+}
 
-/* List: ['few clouds', 'scattered clouds', 'broken clouds', 'shower rain', 'rain', 'thunderstorm', 'snow', 'mist', 'clear sky']; */
 
 #artistLink {
     position:absolute;
@@ -85,8 +86,61 @@ h1, h3 {
     outline:none;
 }
 
+/* ~~~~~~~~~~~~~~~~~~ AUTOCOMPLETE ~~~~~~~~~~~~~~~~~~ */
+
+#autoResults {
+    margin-right:120px;
+    background-color: white;
+    color: black;
+    width:385px;
+    
+}
+
+#autoResults div {
+    height:15px;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+
+#autoResults div:hover {
+    background-color:lightskyblue;
+    cursor:pointer;
+}
+
+.result {
+    padding:10px;
+    padding-top:15px;
+    padding-bottom:15px;
+}
+
+.display {
+    display:flex;
+    flex-direction:column;
+}
+
+.displayNone {
+    display:none;
+}
+
 /* ~~~~~~~~~~~~~~~~~~ RESULTS ~~~~~~~~~~~~~~~~~~ */
 
+#searchSubmit {
+    padding:0;
+    margin:0;
+    display:flex;
+}
+
+#submitBtn {
+    color:rgb(233, 235, 252);
+    background-image:url(assets/images/gradientBlue.jpg);
+    margin-top:13px;
+    margin-left:20px;
+    height:40px;
+    width: 100px;
+    font-size:1.2em;
+    font-family: 'Open Sans', sans-serif;
+    align-self:center;
+}
 
 #results {
     width:100%;

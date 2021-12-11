@@ -1,0 +1,84 @@
+{
+    "cities" : [
+        {
+            "A": ["Aberdeen", "Amsterdam", "Andong", "Adelaide", "Alexandria", "Adana", "Agra", "Ahmadabad", "Andover", "Ankara"]
+        },
+        {
+            "B": ["Bali", "Berlin", "Bangkok", "Barcelona", "Busan", "Beijing", "Beirut", "Belgrade", "Brisbane", "Belem" ]
+        },
+        {
+            "C": ["Crete", "Cancun", "Cusco", "Chuncheon", "Casablanca", "Capetown", "Cairo", "Chicago", "Chengdu", "Changzhou" ]
+        },
+        {
+            "D": ["Dublin", "Dubai", "Dominican Republic", "Daegu", "Daejeon", "Dakar", "Delhi", "Dallas", "Donetsk", "Damascus"]
+        },
+        {
+            "E": ["Edinburgh", "Ecatepec", "Edmonton", "El Paso", "Espoo", "East Flatbush", "Elk Grove", "East Hampton", "Eunapolis", "Eaglesfield"]
+        },
+        {
+            "F": ["Florence","Fuzhou", "Fortaleza", "Fukuoka", "Faridabad", "Fort Worth", "Freetown", "Fujisawa", "Floridablanca", "Formosa"]
+        },
+        {
+            "G": ["Glasgow", "Gyeongju", "Gwangju", "Geoje", "Gangnam", "Gangneung", "Giza", "Guayaquil", "Gujranwala", "Guatemala City" ]
+        },
+        {
+            "H": ["Hanoi", "Hoi An", "Hong Kong", "Hangzhou", "Ho Chi Minh City", "Houston", "Havana", "Hamburg", "Hiroshima", "Hyderabad"]
+        },
+        {
+            "I": ["Istanbul", "Incheon", "Ibadan", "Iztapalapa", "Indianapolis", "Izhevsk", "Ipoh", "Izmir", "Iligan", "Islington"]
+        },
+        {
+            "J": ["Jaipur", "Jeonju", "Jeju", "Jinhae", "Jakarta", "Jeddah", "Johannesburg", "Jacksonville", "Johor Bahru", "Joao Pessoa"]
+        },
+        {
+            "K": ["Krakow", "Key West", "Karachi", "Kinshasa", "Kano", "Kyiv", "Kowloon", "Kobe", "Kyoto", "Kuala Lumpur"]
+        },
+        {
+            "L": ["London", "Lisbon", "Lagos", "Los Angeles", "Lanzhou", "Lima", "Liverpool", "Lome", "Lodz", "La Paz"]
+        },
+        {
+            "M": ["Marrakech", "Mumbai", "Moscow", "Melbourne", "Madrid", "Maracay", "Minsk", "Manila", "Medellin", "Montreal"]
+        },
+        {
+            "N": ["New Orleans", "New Delhi", "New York City", "Navi", "Nanjing", "Nairobi", "Nagoya", "Nizhniy Novgorod", "Naples", "Nottingham"]
+        },
+        {
+            "O": ["Oklahoma City", "Osaka", "Omsk", "Ottawa", "Osasco", "Oklahoma City", "Oslo", "Omaha", "Ostrava", "Owo"]
+        },
+        {
+            "P": ["Paris", "Phuket", "Playa del Carmen", "Phoenix", "Pyongyang", "Pretoria", "Palembang", "Porto Alegre", "Phnom Penh", "Perth"]
+        },
+        {
+            "Q": ["Qingdao","Queens", "Quebec", "Quito", "Quetta", "Quilmes",  "Quelimane", "Queimados", "Queenstown", "Qalyub"]
+        },
+        {
+            "R": ["Reykjavik", "Rome", "Rio de Janeiro", "Riyadh", "Rome", "Rabat", "Rosario", "Rajshahi", "Rotterdam", "Raleigh" ]
+        },
+        {
+            "S": ["Seoul", "Siem Rep", "Suwon", "Seogwipo", "Shanghai", "Sao Paulo", "Saint Petersburg", "Sydney", "Singapore", "Salvador"]
+        },
+        {
+            "T": ["Tenerife", "Tongyeong", "Tokyo", "Taipei", "Toronto", "Tashkent", "Tijuana", "The Bronx", "Taichung", "Turin"]
+        },
+        {
+            "U": ["Ulsan", "Urumqi", "Ulan Bator", "Uberlandia", "Uyo", "Utrecht", "Uji", "Umraniye", "Ulhasnagar", "Umuahia"]
+        },
+        {
+            "V": ["Vienna", "Vadodara", "Vancouver", "Vladivostok", "Virginia Beach", "Veracruz", "Villahermosa", "Varanasi", "Valencia", "Volgograd"]
+        },
+        {
+            "W": ["Wuhan", "Warsaw", "Wenzhou", "Winnipeg", "Washington, D.C.", "West Jerusalem", "Wichita", "Wellington", "Wuppertal", "West Raleigh"]
+        },
+
+        {
+            "X": ["Xalapa", "Xanadu", "Xenia", "Xiamen", "Xiaogan", "Xinyang", "Xinxiang", "Xalapa de Enriquez", "Xining", "Xi'an"]
+        },
+        {
+            "Y": ["Yeosu", "Yangon", "Yokohama", "Yunfu", "Yaounde", "Yerevan", "Yono", "Yogyakarta", "Yokosuka", "Yeovil"]
+        },
+        {
+            "Z": ["Zhengzhou", "Zibo", "Zapopan", "Zaria", "Zaporizhia", "Zarqa", "Zagreb", "Zaragoza", "Zamboanga", "Zanzibar"]
+        }
+        
+    ]
+}

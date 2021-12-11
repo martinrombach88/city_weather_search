@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>City Weather Search</title>
+    <link href="/assets/images/weather.ico" rel="icon" type="image/x-icon" />
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Zen+Maru+Gothic:wght@500&display=swap" rel="stylesheet">
     
@@ -12,16 +13,21 @@
 <body>
     <div id="searchContainer">
         <h1>City Weather Search</h1>
+        <form action="" id="searchSubmit">
+
         <input type="text" name="search" id="search" value="Enter a City" autocomplete="off">
+        <input type="submit" value="Submit" id="submitBtn">
+        </form>
     </div>
+    <div id="autoResults"></div>
 
     <div id="results">
 
     </div>
     
-    <div id="artistLink">
+    <!-- <div id="artistLink">
         <a  href='https://www.freepik.com/vectors/background'>Background vector created by starline - www.freepik.com</a>
-    </div>
+    </div> -->
 
     <script src="search.js"></script>
 </body>

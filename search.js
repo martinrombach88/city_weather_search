@@ -1,19 +1,100 @@
-search = document.querySelector("#search");
+//~~~~~~~~~~~~~~~~~~ EVENT LISTENERS ~~~~~~~~~~~~~~~~~~ //
+
+const search = document.querySelector("#search");
+const searchSubmit = document.querySelector("#searchSubmit")
+const results = document.querySelector("#results");
+const autoComplete = document.querySelector("#autoComplete");
+const autoResults = document.querySelector("#autoResults");
+let autoArray = [];
+autoResults.setAttribute("class", "displayNone");
+resultsClicked = false;
+
 
 search.addEventListener("focus", function(e) {
     search.value = "";
 })
 
 search.addEventListener("keyup", function(e) {
-    if(e.key == 'Enter') {
-        getWeather(e.target.value);
-    }
+    let query = e.target.value;
+    getAutoArray("assets/citylist/citylist.json", query); 
 })
 
-//Getting the Data
+searchSubmit.addEventListener("submit", function(e) {
+    e.preventDefault();
+    getWeather(search.value);
+    emptyAutoResults();
+    search.value = "";
+})
+
+
+//~~~~~~~~~~~~~~~~~~ AUTOCOMPLETE ~~~~~~~~~~~~~~~~~~ //
+
+function getAutoArray(json, query) {
+    const citiesArray = [];
+    fetch(json)
+    .then((response) => {
+        return response.json();
+    })
+    .then((data) => {    
+        for (let i = 0; i < data.cities.length; i++) {
+            for (key in data.cities[i]) {
+                for (let j=0; j < data.cities[i][key].length; j++) {
+                    citiesArray.push(data.cities[i][key][j]);
+                };
+            }        
+        }
+    autoArray = setAutoArray(citiesArray, query);
+    if(query) {
+        createAutoResults(autoArray, query);
+        resultsClick();
+    } else {
+        emptyAutoResults();
+    }
+    })
+}
+
+function setAutoArray(array, query) {
+    let autoArray = [];  
+    for (let i=0; i < array.length; i++) {
+        if (array[i].substr(0, query.length).toUpperCase() == query.toUpperCase()) {
+            autoArray.push(array[i]);
+        }
+    }
+    return autoArray;
+}
+
+function createAutoResults(autoArray){
+    autoResults.innerHTML = "";
+    autoResults.setAttribute("class", "display");
+        
+    for(let i = 0; i < autoArray.length; i++) {  
+        let resultDiv = document.createElement('div');
+        resultDiv.textContent = autoArray[i];
+        resultDiv.setAttribute("class", "result")
+        autoResults.appendChild(resultDiv);
+    }
+}
+
+const emptyAutoResults = function() {
+    autoResults.classList.add('displayNone');
+    autoResults.classList.remove('display');
+    autoResults.innerHTML = "";
+}
+
+const resultsClick = function() {
+    let divs = document.getElementsByClassName("result");
+    for (let i = 0; i < divs.length; i++){
+        divs[i].addEventListener('click', function(e) {
+            search.value = divs[i].textContent;
+            emptyAutoResults();
+        })
+    }
+}
+
+//~~~~~~~~~~~~~~~~~~ DATA RETRIEVAL ~~~~~~~~~~~~~~~~~~ //
 
 function getWeather(city)  {
-    const results = document.querySelector("#results");
+    
     const APP_ID = "1cbfb739f9b6cfae7ea0cc16fe258306";
     let xhr = new XMLHttpRequest();
     let citySelect = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid="+ APP_ID;
@@ -23,7 +104,6 @@ function getWeather(city)  {
             results.innerHTML = "";
             let weatherResponse = JSON.parse(xhr.response);
             let filteredWData = filterWeatherData(weatherResponse.city.name, weatherResponse.list);
-            console.log(filteredWData);
             setToday(results, filteredWData);
             setOtherContainer(results, filteredWData);
         }
@@ -60,7 +140,8 @@ function filterWeatherData(city, dataList) {
     return weatherArray;
 }
 
-//Create HTML and Set Data
+
+//~~~~~~~~~~~~~~~~~~ HTML STRUCTURE ~~~~~~~~~~~~~~~~~~ //
 
 //Create Default Values Shared by All Days
 function createDayDefault(parent, data, index) {
@@ -70,6 +151,8 @@ function createDayDefault(parent, data, index) {
     parent.appendChild(day);
     parent.appendChild(desc);
     parent.appendChild(temp);
+    console.log(desc.textContent);
+
 }
 
 //Create HTML Structure - Today and Container
@@ -104,6 +187,23 @@ function setToday(parent, dataList) {
     tInnerDivSide1.appendChild(pres);
     tInnerDivSide2.appendChild(humi);
     tInnerDivSide2.appendChild(clou);
+
+    //Set Background
+    desc = todayContainer.firstChild.nextSibling.nextSibling.nextSibling;
+
+    if (desc.textContent === "overcast clouds" || desc.textContent === "broken clouds" || desc.textContent === "scattered clouds") {
+        document.body.setAttribute("id", "cloudyBody");
+    } else if (desc.textContent === "clear sky" || desc.textContent === "few clouds") {
+        document.body.setAttribute("id", "clearBody");
+    } else if (desc.textContent === "light rain" || desc.textContent === "shower rain") {
+        document.body.setAttribute("id", "rainyBody");
+    } else if (desc.textContent === "snow") {
+        document.body.setAttribute("id", "snowyBody");
+    } else if (desc.textContent === "thunderstorm") {
+        document.body.setAttribute("id", "stormyBody");
+    } else if (desc.textContent === "mist") {
+        document.body.setAttribute("id", "mistyBody");
+    }
 }
 
 //Create HTML Structure - Other Days and Container
@@ -133,23 +233,9 @@ function createItem(tag, data) {
 }
 
 function createIcon(data) {
-    let icon = document.createElement('img'); // Should be skeleton Phase
-    icon.setAttribute("src", "http://openweathermap.org/img/w/" + data + ".png"); //Should be Populate phase
+    let icon = document.createElement('img');
+    icon.setAttribute("src", "http://openweathermap.org/img/w/" + data + ".png");
     return icon; 
 }
 
-//Set Background 
-function setBackground(data, array) {
-    
-    const backgroundArray = ['few clouds', 'scattered clouds', 'broken clouds', 'shower rain', 'rain', 'thunderstorm', 'snow', 'mist', 'clear sky'];
-
-}
-
-//LOGIC - 
-//if data includes description X, change to background X.
-//Background changes set on body.
-
-//Use data[index].description to reference the description.
-
-//Get backgrounds first
 
