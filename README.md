@@ -21,9 +21,9 @@ Work Order:
 2. Integrate base weather app code and stylise (complete)
 3. Implement the background changer (complete)
 4. Implement the auto complete feature (complete)
+5. Implement keyboard controls on the autocomplete feature. (complete)
 
 Future Updates:
 1. Improve the background designs with a consultation from a designer
-2. Break the search.js into a modular structure of multiple files.
-3. Implement keyboard controls on the autocomplete feature.
+
 
