@@ -14,7 +14,7 @@ The first is a background changer that responds to the description in today's we
 
 The second is an autocomplete feature on the search. While I did have the option to include a full list of all the cities in the world, the slow down potential for this feature was intimidating. Instead I decided to make my own JSON file with an object of arrays that would somewhat simulate the difficulty of importing an API data object, without the potential slowdown problems it could cause for both myself and anyone using my portfolio.
 
-I was interested in making this site modular but with the event listeners I expect it is a long task, as they rely on the global object for variables. Due to time constraints with other projects, I will have to put it on a future updates list. 
+I'm hoping to make this site modular in future. Modular JS isn't something I've studied yet, so I'll implement the functionality in time.
 
 Work Order:
 1. Build HTML structure (complete)
@@ -22,8 +22,10 @@ Work Order:
 3. Implement the background changer (complete)
 4. Implement the auto complete feature (complete)
 5. Implement keyboard controls on the autocomplete feature. (complete)
+6. Implement media queries and make the site responsive.
 
 Future Updates:
 1. Improve the background designs with a consultation from a designer
+2. Rebuild in a modular way.
 
 
