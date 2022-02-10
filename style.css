@@ -4,11 +4,10 @@ body {
     flex-direction:column;
     justify-content: center;
     align-items:center;
-    background-size:cover;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-image:url(assets/images/gradientBlue.jpg);
     color:rgb(233, 235, 252);
-    
-    
 }
 
 #rainyBody {
@@ -44,7 +43,7 @@ body {
 
 #artistLink {
     position:absolute;
-    top:555px;
+    bottom:10px;
     right:10px;
     font-size:0.7em;
     
@@ -89,11 +88,12 @@ h1, h3 {
 /* ~~~~~~~~~~~~~~~~~~ AUTOCOMPLETE ~~~~~~~~~~~~~~~~~~ */
 
 #autoResults {
+    position:absolute;
     margin-right:120px;
     background-color: white;
     color: black;
     width:385px;
-    
+    top:140px;  
 }
 
 #autoResults div {
@@ -205,4 +205,121 @@ h1, h3 {
 
 .innerDiv p{
     font-size:0.8em;
+}
+
+/* ~~~~~~~~~~~~~~~~~~ PORTRAIT PHONE ~~~~~~~~~~~~~~~~~~ */
+@media screen and (max-width: 768px){
+
+    body {
+        background-size:auto;
+    }
+    #search {
+        font-family: 'Open Sans', sans-serif;
+        font-size:0.8em;
+        width:100px;
+        height:20px;
+        padding:10px;
+        
+    }
+    
+    #autoResults {
+        position:absolute;
+        margin-right:120px;
+        background-color: white;
+        color: black;
+        width:100px;
+        top:100px;  
+    }
+    
+    #autoResults div {
+        height:15px;
+        padding-top:5px;
+        padding-bottom:5px;
+    }
+
+    #artistLink {
+        font-size:0.7em;
+        display:none;
+    } 
+
+    #results {
+        width:40%;
+        display:flex;
+        flex-wrap:wrap;
+    }
+
+    
+    .allOther {
+    border-top: 1px solid;
+    display:flex;
+    }
+
+    .otherDay {
+        justify-content: center;
+    }
+
+    .container {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        width:100%;
+    }
+}
+
+/* ~~~~~~~~~~~~~~~~~~ PORTRAIT TABLET ~~~~~~~~~~~~~~~~~~ */
+
+@media screen and (max-width: 768px) and (max-height:1366px) and (min-width){
+
+    body {
+        background-size:auto;
+    }
+
+    #search {
+        font-family: 'Open Sans', sans-serif;
+        margin-top:10px;
+        font-size:1.2em;
+        width:100px;
+        height:20px;
+        padding:10px;
+        
+    }
+    
+    #autoResults {
+        position:absolute;
+        margin-right:120px;
+        background-color: white;
+        color: black;
+        width:100px;
+        top:100px;  
+    }
+    
+    #autoResults div {
+        height:15px;
+        padding-top:5px;
+        padding-bottom:5px;
+    }
+
+
+    #results {
+        width:40%;
+        display:flex;
+        flex-wrap:wrap;
+    }
+
+    
+    .allOther {
+    border-top: 1px solid;
+    display:flex;
+    }
+
+    .otherDay {
+        justify-content: center;
+    }
+
+    .container {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        width:100%;
+    }
 }
